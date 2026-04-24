@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+body.body-login {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px 30px 25px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    /* Needed for floating icon */
+    margin-top: 40px;
+    /* Space for overlapping icon */
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Header & Overlapping Icon */
+.card-header-aesthetic {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.login-icon-overlap {
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -80px;
+    /* Overlap by half its height + some padding */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
+    border: 5px solid #ffffff;
+    /* Seamless integration with white card */
+    z-index: 10;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.login-icon-overlap i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -6px);
+    }
+}
+
+.card-header-aesthetic h2 {
+    color: #1e293b;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 10px 0 5px;
+    letter-spacing: -0.5px;
+}
+
+.card-header-aesthetic p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Input Group & Label Refinements */
+.input-group-custom {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.input-group-custom label {
+    display: block;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-left: 15px;
+    /* Indent label slightly to match pill input */
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Icon + Input Wrapper */
+.input-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    z-index: 2;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+/* Soft UI Frameless Inputs */
+.input-icon-wrap input {
+    width: 100%;
+    padding: 12px 20px 12px 48px;
+    /* Deeper padding for pill shape */
+    border: 2px solid transparent !important;
+    border-color: transparent !important;
+    /* Frameless resting state */
+    background-color: #f1f5f9;
+    /* Soft gray background */
+    border-radius: 50px;
+    /* Pill shape */
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    font-size: 15px;
+    color: #1e293b;
+    height: 52px;
+    /* Taller, friendlier input */
+    outline: none;
+}
+
+.input-icon-wrap input:focus {
+    border-color: #00c6ff !important;
+    background-color: #ffffff;
+    /* Pops to white on focus */
+    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.15);
+}
+
+.input-icon-wrap input:focus+.input-icon,
+.input-icon-wrap input:focus~.input-icon {
+    color: #0072ff;
+}
+
+.input-icon-wrap input::placeholder {
+    color: #cbd5e1;
+}
+
+/* Vibrant Pill Button */
+.btn-login {
+    width: 100%;
+    height: 52px;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.3);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #00b4eb 0%, #0060d4 100%);
+    box-shadow: 0 12px 28px rgba(0, 114, 255, 0.45);
+    transform: translateY(-4px);
+}
+
+/* Footer / Back Link */
+.card-footer {
+    margin-top: 25px;
+}
+
+.back-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #0072ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
