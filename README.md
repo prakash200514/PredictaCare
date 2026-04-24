@@ -34,13 +34,12 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 - **Database**: MySQL
 - **Design Elements**: Custom CSS layouts and interactive UI components.s
 
-##### For log in or you can Registration 
+🔐 Credentials
 
-For Admin Login UserName: admin 
-                Password: Ab123456
-
-For User Login UserName: user
-               Password:Ab123456
+| User Type | Username | Password |
+| :--- | :--- | :--- |
+| **Admin** | `admin` | `Ab123456` |
+| **User** | `user` | `Ab123456` |
 
 🛠️ Setup & Installation
 
