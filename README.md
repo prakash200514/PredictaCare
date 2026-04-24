@@ -15,8 +15,17 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 #### Credits : Some Symptoms and Disease Information are collected by Shoibe Akter and Nayeem-ul-Haque and the part of the skeleton are collected by Shoibe Akter🙂.
 
 <hr>
+✨ Key Features
 
-##### Note: This Project is Not fully Responsive 
+- 👤 **User Authentication**: Secure signup and login for personalized health tracking.
+- 🧬 **Body-Part Specific Analysis**: Interactive selection from various body parts (Head, Chest, Abdomen, Pelvis, etc.).
+- 🔍 **Symptom Mapping**: Detailed symptom checklists for precise diagnostic logic.
+- 📊 **Prediction Engine**: Real-time analysis of symptoms to determine the most likely disease.
+- 🕒 **History Tracking**: Log of previous results for users to monitor their health over time.
+- 🛠️ **Admin Dashboard**: Comprehensive control panel to manage diseases, symptoms, users, and feedback.
+- 📝 **Feedback System**: Integrated communication channel for users to provide suggestions or report issues.
+
+---
 
 ##### For log in or you can Registration 
 
