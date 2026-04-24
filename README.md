@@ -69,6 +69,13 @@ Move the project folder to `C:\xampp\htdocs\`.
 Access the application via: `http://localhost/disease/`
 
 ---
+⚠️ Important Cautions
+
+> [!WARNING]  
+> **Medical Disclaimer**: This application is for educational and informational purposes only. It is **not** a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health providers with any questions you may have regarding a medical condition.
+
+- **Scope**: Currently focuses on the front part of the body and general symptoms.
+- **Accuracy**: Predictions are based on the symptoms provided and may not be 100% accurate.
 
 
 #### Some Samples of this project is given below :
