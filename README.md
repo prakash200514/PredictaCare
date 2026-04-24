@@ -5,7 +5,7 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 ## Here, I am trying to do this project using core php .
 <hr>
 
-#### Peoject Description: This Project is basically predict the disease based on your symptoms. After Entering the system you can Login or Registration.Login is not mandatory for checking the disease. First you have to select the portion of your body which you feel bad.Then After selecting some symtopmps you can get the result.
+#### Project Description: This Project is basically predict the disease based on your symptoms. After Entering the system you can Login or Registration.Login is not mandatory for checking the disease. First you have to select the portion of your body which you feel bad.Then After selecting some symtopmps you can get the result.
 
 #### Restriction : You can only check the front part of your body.And I am not working with the female part.
 
