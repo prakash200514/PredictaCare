@@ -42,6 +42,35 @@ For Admin Login UserName: admin
 For User Login UserName: user
                Password:Ab123456
 
+🛠️ Setup & Installation
+
+Follow these steps to get the project running locally:
+
+### 1. Prerequisites
+Ensure you have a local server environment installed (e.g., **XAMPP**, **WAMP**, or **MAMP**).
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/prakash200514/PredictaCare.git
+```
+
+### 3. Database Configuration
+1. Start **Apache** and **MySQL** from your XAMPP Control Panel.
+2. Open **phpMyAdmin** (`http://localhost/phpmyadmin`).
+3. Create a new database named `disease`.
+4. Import the `disease.sql` file located in the `database/` folder of this project.
+
+### 4. Connection Setup
+If your MySQL root password is not blank, update the connection settings in:
+- `link/config.php`
+- Any individual files using `mysqli_connect` (e.g., `delete_users.php`, etc.)
+
+### 5. Launch the Application
+Move the project folder to `C:\xampp\htdocs\`.
+Access the application via: `http://localhost/disease/`
+
+---
+
 
 #### Some Samples of this project is given below :
 
