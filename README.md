@@ -25,7 +25,7 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 - 🛠️ **Admin Dashboard**: Comprehensive control panel to manage diseases, symptoms, users, and feedback.
 - 📝 **Feedback System**: Integrated communication channel for users to provide suggestions or report issues.
 
----
+
 
 🚀 Tech Stack
 
