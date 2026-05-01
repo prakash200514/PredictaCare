@@ -78,7 +78,7 @@ Access the application via: `http://localhost/disease/`
 - **Accuracy**: Predictions are based on the symptoms provided and may not be 100% accurate.
 
 
-#### Some Samples of this project is given below :
+ Some Samples of this project is given below :
 
 ![Front Page](images/1.PNG)
 ![2nd Page](images/2.PNG)
