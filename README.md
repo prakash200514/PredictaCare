@@ -46,13 +46,13 @@ Ensure you have a local server environment installed (e.g., **XAMPP**, **WAMP**,
 git clone https://github.com/prakash200514/PredictaCare.git
 ```
 
-### 3. Database Configuration
+## 3. Database Configuration
 1. Start **Apache** and **MySQL** from your XAMPP Control Panel.
 2. Open **phpMyAdmin** (`http://localhost/phpmyadmin`).
 3. Create a new database named `disease`.
 4. Import the `disease.sql` file located in the `database/` folder of this project.
 
-### 4. Connection Setup
+## 4. Connection Setup
 If your MySQL root password is not blank, update the connection settings in:
 - `link/config.php`
 - Any individual files using `mysqli_connect` (e.g., `delete_users.php`, etc.)
