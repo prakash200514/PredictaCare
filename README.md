@@ -34,13 +34,6 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 - **Database**: MySQL
 - **Design Elements**: Custom CSS layouts and interactive UI components.s
 
-🔐 Credentials
-
-| User Type | Username | Password |
-| :--- | :--- | :--- |
-| **Admin** | `admin` | `Ab123456` |
-| **User** | `user` | `Ab123456` |
-
 🛠️ Setup & Installation
 
 Follow these steps to get the project running locally:
