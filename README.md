@@ -27,7 +27,7 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 
 
 
-🚀 Tech Stack
+  🚀 Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript, jQuery
 - **Backend**: PHP (Core PHP & PDO)
