@@ -2,7 +2,7 @@
 
 This Project is predict the disease based on your Symptoms .Here ,the I use Html, CSS, JavaScript ,PHP ,MySql ,JQuery. .Before Enter to the project at first insert the database into the sql database .Database file is given inside the project.
 
-## Here, I am trying to do this project using core php .
+<---## Here, I am trying to do this project using core php .
 <hr>
 
 #### Project Description: This Project is basically predict the disease based on your symptoms. After Entering the system you can Login or Registration.Login is not mandatory for checking the disease. First you have to select the portion of your body which you feel bad.Then After selecting some symtopmps you can get the result.
