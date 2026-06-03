@@ -36,7 +36,7 @@ This Project is predict the disease based on your Symptoms .Here ,the I use Html
 - **Design Elements**: Custom CSS layouts and interactive UI components.s
 
 🛠️ Setup & Installation
-1 2 3  
+1 2 
 Follow these steps to get the project running locally:
 
 ### 1. Prerequisites
