@@ -1,5 +1,5 @@
 <?php 
-<<<<<<<
+<<<<<<
 $ed1=$_POST['var1'];
 $ed2=$_POST['var2'];
 $ed3=$_POST['var3'];
