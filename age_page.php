@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Rule 1 & 4 & 5 Guard: Must be logged in
+// Rule 1 & 4 & 5 Guard: Must be logged i
 if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true) {
     header("Location: index.php");
     exit();
