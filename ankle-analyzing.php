@@ -8,7 +8,7 @@ $ed5=$_POST['var5'];
 $ed6=$_POST['var6'];
 $ed7=$_POST['var7'];
 $ed8=$_POST['var8'];
-<<<<<<<
+<<<<<<
 
 if(($_POST[1])=="Yes")
 {
