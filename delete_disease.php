@@ -1,11 +1,9 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "disease");
+include_once('link/config.php');
 
-
- 
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+if(!$link){
+    die("ERROR: Could not connect to database.");
 }
 
 $stid=intval($_GET['stid']);
