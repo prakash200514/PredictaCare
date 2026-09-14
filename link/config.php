@@ -37,8 +37,13 @@ $pdoOptions = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"
 ];
-if ($useSsl && defined('PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT')) {
-    $pdoOptions[PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT] = false;
+if ($useSsl) {
+    if (defined('PDO::MYSQL_ATTR_SSL_CA')) {
+        $pdoOptions[PDO::MYSQL_ATTR_SSL_CA] = true;
+    }
+    if (defined('PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT')) {
+        $pdoOptions[PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT] = false;
+    }
 }
 
 // Establish PDO connection
@@ -62,11 +67,12 @@ try {
 // Establish MySQLi connection for scripts using mysqli
 if ($useSsl) {
     $link = mysqli_init();
-    if (defined('MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT')) {
-        @mysqli_real_connect($link, DB_HOST, DB_USER, DB_PASS, DB_NAME, (int)DB_PORT, NULL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
-    } else {
-        @mysqli_real_connect($link, DB_HOST, DB_USER, DB_PASS, DB_NAME, (int)DB_PORT);
+    if (defined('MYSQLI_OPT_SSL_VERIFY_SERVER_CERT')) {
+        @mysqli_options($link, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, false);
     }
+    @mysqli_ssl_set($link, NULL, NULL, NULL, NULL, NULL);
+    $flags = defined('MYSQLI_CLIENT_SSL') ? MYSQLI_CLIENT_SSL : 0;
+    @mysqli_real_connect($link, DB_HOST, DB_USER, DB_PASS, DB_NAME, (int)DB_PORT, NULL, $flags);
 } else {
     $link = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, (int)DB_PORT);
     if (!$link && DB_HOST === 'localhost' && DB_PASS !== '') {

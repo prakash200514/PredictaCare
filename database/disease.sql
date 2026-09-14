@@ -28,10 +28,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `UserName` varchar(100) DEFAULT NULL,
-  `Password` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Password` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UserName` (`UserName`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=7;
 
 --
 -- Dumping data for table `admin`
@@ -47,11 +49,13 @@ INSERT INTO `admin` (`id`, `UserName`, `Password`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `disease_tb` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `disease_id` int(50) NOT NULL,
   `disease_name` varchar(100) NOT NULL,
-  `cause` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `cause` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `disease_id` (`disease_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=139;
 
 --
 -- Dumping data for table `disease_tb`
@@ -204,11 +208,12 @@ INSERT INTO `disease_tb` (`id`, `disease_id`, `disease_name`, `cause`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `symptoms_tb` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `symptoms_id` int(50) NOT NULL,
   `symptoms_name` varchar(100) NOT NULL,
-  `disease_id` int(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `disease_id` int(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=398;
 
 --
 -- Dumping data for table `symptoms_tb`
@@ -617,14 +622,16 @@ INSERT INTO `symptoms_tb` (`id`, `symptoms_id`, `symptoms_name`, `disease_id`) V
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(100) NOT NULL,
   `password` varchar(255) DEFAULT NULL,
   `contact` varchar(100) NOT NULL,
   `gender` varchar(20) DEFAULT NULL,
   `reg_date` timestamp NULL DEFAULT current_timestamp(),
-  `result` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `result` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_name` (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=17;
 
 --
 -- Dumping data for table `user`
@@ -641,13 +648,14 @@ INSERT INTO `user` (`id`, `user_name`, `password`, `contact`, `reg_date`, `resul
 --
 
 CREATE TABLE IF NOT EXISTS `user_result` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `experience` varchar(255) NOT NULL,
   `comments` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `c_date` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `c_date` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=22;
 
 --
 -- Dumping data for table `user_result`
@@ -656,76 +664,6 @@ CREATE TABLE IF NOT EXISTS `user_result` (
 INSERT INTO `user_result` (`id`, `experience`, `comments`, `name`, `email`, `c_date`) VALUES
 (21, 'average', 'Great ', 'Cris Gayle', 'Cris@gmail.com', '2020-04-04 14:03:10');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `UserName` (`UserName`);
-
---
--- Indexes for table `disease_tb`
---
-ALTER TABLE `disease_tb`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `disease_id` (`disease_id`);
-
---
--- Indexes for table `symptoms_tb`
---
-ALTER TABLE `symptoms_tb`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_name` (`user_name`);
-
---
--- Indexes for table `user_result`
---
-ALTER TABLE `user_result`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `disease_tb`
---
-ALTER TABLE `disease_tb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
-
---
--- AUTO_INCREMENT for table `symptoms_tb`
---
-ALTER TABLE `symptoms_tb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=398;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `user_result`
---
-ALTER TABLE `user_result`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
