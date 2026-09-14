@@ -4,7 +4,6 @@ include('link/config.php');
 ?>
  
 
- 
 <!DOCTYPE html>
 <html lang="en">
     <head>

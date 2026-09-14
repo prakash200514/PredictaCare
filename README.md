@@ -2,6 +2,7 @@
 
 [![PHP Version](https://img.shields.io/badge/PHP-7.4+-blue.svg)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-Database-orange.svg)](https://www.mysql.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **PredictaCare** is a robust, web-based diagnostic assistant designed to help users identify potential health issues based on their symptoms. By selecting specific body parts and corresponding symptoms, the system analyzes the data to provide an informed prediction of possible diseases.
@@ -17,6 +18,7 @@
 - 🕒 **History Tracking**: Log of previous results for users to monitor their health over time.
 - 🛠️ **Admin Dashboard**: Comprehensive control panel to manage diseases, symptoms, users, and feedback.
 - 📝 **Feedback System**: Integrated communication channel for users to provide suggestions or report issues.
+- ☁️ **Cloud & Docker Ready**: Preconfigured for instant cloud deployment on Railway, Render, or Docker.
 
 ---
 
@@ -25,11 +27,20 @@
 - **Frontend**: HTML5, CSS3, JavaScript, jQuery
 - **Backend**: PHP (Core PHP & PDO)
 - **Database**: MySQL
+- **Container**: Docker & Docker Compose
 - **Design Elements**: Custom CSS layouts and interactive UI components.
 
 ---
 
-## 🛠️ Setup & Installation
+## 🚀 Cloud Deployment
+
+PredictaCare can be deployed in minutes to **Railway** or **Render** using Docker:
+
+👉 **[Read the Full Cloud Deployment Guide (DEPLOYMENT_GUIDE.md)](DEPLOYMENT_GUIDE.md)**
+
+---
+
+## 🛠️ Local Setup & Installation
 
 Follow these steps to get the project running locally:
 
@@ -45,20 +56,15 @@ git clone https://github.com/prakash200514/PredictaCare.git
 1. Start **Apache** and **MySQL** from your XAMPP Control Panel.
 2. Open **phpMyAdmin** (`http://localhost/phpmyadmin`).
 3. Create a new database named `disease`.
-4. Import the `disease.sql` file located in the `database/` folder of this project.
+4. Import the `disease.sql` file located in the `database/` folder of this project (or visit `http://localhost/disease/setup-db.php` to initialize automatically).
 
-### 4. Connection Setup
-If your MySQL root password is not blank, update the connection settings in:
-- `link/config.php`
-- Any individual files using `mysqli_connect` (e.g., `delete_users.php`, etc.)
-
-### 5. Launch the Application
+### 4. Launch the Application
 Move the project folder to `C:\xampp\htdocs\`.
 Access the application via: `http://localhost/disease/`
 
 ---
 
-## 🔐 Credentials
+## 🔐 Default Credentials
 
 | User Type | Username | Password |
 | :--- | :--- | :--- |
@@ -77,10 +83,6 @@ Access the application via: `http://localhost/disease/`
 
 ---
 
-
-
----
-
 ## 📸 Project Preview
 
 ![Front Page](images/1.PNG)
@@ -95,4 +97,3 @@ Access the application via: `http://localhost/disease/`
 ---
 
 <p align="center">Made with ❤️ for Healthcare Awareness</p>
-
